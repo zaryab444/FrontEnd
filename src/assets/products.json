@@ -1,0 +1,49 @@
+{
+	"data": [
+		{
+			"id": "1000",
+			"product_name": "Watches",
+			"price": 65000,
+			"product_image": "assets/img/category_img_01.jpg",
+            "product_description":"Enhance your style with our premium accessories collection."   
+		},
+        {
+			"id": "2000",
+			"product_name": "Shoes",
+			"price": "50000",
+			"product_image": "assets/img/category_img_02.jpg",
+            "product_description":"Enhance your style with our premium accessories collection."  
+		},
+        {
+			"id": "3000",
+			"product_name": "Glasses",
+			"price": "50000",
+			"product_image": "assets/img/category_img_03.jpg",
+            "product_description":"Enhance your style with our premium accessories collection."  
+		},
+        {
+			"id": "4000",
+			"product_name": "Accessories",
+			"price": "50900",
+			"product_image": "assets/img/feature_prod_01.jpg",
+            "product_description":"Enhance your style with our premium accessories collection.",
+            "count":24
+		},
+        {
+			"id": "300",
+			"product_name": "Nike Watches",
+			"price": 50000,
+			"product_image": "assets/img/feature_prod_02.jpg",
+            "product_description":"Experience precision and style with the sleek Nike watch.",
+            "count":18  
+		},
+        {
+			"id": "4000",
+			"product_name": "Mini Shoots",
+			"price": 50000,
+			"product_image": "assets/img/feature_prod_03.jpg",
+            "product_description":"Capture moments in stunning detail with our high-definition camera.",
+            "count":64  
+		}
+    ]
+}

@@ -1,1 +1,83 @@
-<p>featured-products works!</p>
+<head>
+    <title>Zay Shop eCommerce HTML CSS Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="../../../../src/assets/img/apple-icon.jpg">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../src/assets/img/favicon.ico">
+
+    <link rel="stylesheet" href="../../../../src/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../src/assets/css/templatemo.css">
+    <link rel="stylesheet" href="../../../../src/assets/css/custom.css">
+   <link rel="stylesheet" href="../../../../src/assets/css/fontawesome.min.css">
+
+</head>
+
+
+ <!-- Start Categories of The Month -->
+  <div class="container py-5">
+    <div class="row text-center pt-3">
+        <div class="col">
+            <h1 class="h1">Categories of The Month</h1>
+            <p>
+                Explore our Categories of the Month, showcasing the latest trends and top picks.
+            </p>
+        </div>
+        <div class="row">
+            @for (item of monthlyProducts; track item.id) {
+               
+            <div class="col p-5 mt-3">   
+                <a href="#"><img [src]="item?.product_image" class="rounded-circle img-fluid border"></a>
+                <h5 class="text-center mt-3 mb-3">{{item?.product_name}}</h5>
+                <p class="text-center"><a class="btn btn-success">Go Shop</a></p>
+            </div>
+        }
+        </div>
+    </div>
+    </div>
+<!-- End Categories of The Month -->
+
+
+<!-- Start Featured Product -->
+<section class="bg-light">
+    <div class="container py-5">
+        <div class="row text-center py-3">
+            <div class="col-lg-6 m-auto">
+                <h1 class="h1">Featured Product</h1>
+                <p>
+                    Discover our featured product, combining innovation and exceptional quality.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            @for (productData of featureProducts; track productData.id) {
+            <div class="col">
+                
+                <div class="card h-100">
+                    <a href="shop-single.html">
+                        <img [src]="productData?.product_image" class="card-img-top" alt="...">
+                    </a>
+                    <div class="card-body">
+                        <ul class="list-unstyled d-flex justify-content-between">
+                            <li>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-muted fa fa-star"></i>
+                                <i class="text-muted fa fa-star"></i>
+                            </li>
+                            <li class="text-muted text-right">{{productData?.price}}</li>
+                        </ul>
+                        <a href="shop-single.html" class="h2 text-decoration-none text-dark">{{productData?.product_name}}</a>
+                        <p class="card-text">
+                            {{productData?.product_description}}
+                        </p>
+                        <p class="text-muted">Reviews (24)</p>
+                    </div>
+                </div>
+            
+            </div>
+        }
+        </div>
+    </div>
+</section>
+<!-- End Featured Product -->
