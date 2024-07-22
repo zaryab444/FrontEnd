@@ -1,1 +1,72 @@
-<p>contact works!</p>
+<head>
+    <title>Zay Shop eCommerce HTML CSS Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="../../../../src/assets/img/apple-icon.jpg">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../src/assets/img/favicon.ico">
+
+    <link rel="stylesheet" href="../../../../src/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../src/assets/css/templatemo.css">
+    <link rel="stylesheet" href="../../../../src/assets/css/custom.css">
+   <link rel="stylesheet" href="../../../../src/assets/css/fontawesome.min.css">
+
+</head>
+
+<div class="container-fluid bg-light py-5">
+    <div class="col-md-6 m-auto text-center">
+        <h1 class="h1">Contact Us</h1>
+        <p>
+            Get in touch with us for any inquiries or support.
+        </p>
+    </div>
+</div>
+
+<div class="container py-5">
+    <div class="row py-5">
+        <ng-container #f="ngForm" [formGroup]="contactForm">
+            <div class="row">
+                <div class="form-group col-md-6 mb-3">
+                    <label for="inputname">Name</label>
+                    <input type="text" formControlName="name" class="form-control mt-1" id="name" name="name" placeholder="Name">
+                    <div class="text-danger">
+                        @if (contactForm.get('name')?.invalid && contactForm.get('name')?.touched) {
+                            Name is required.
+                          }
+                    </div>
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                    <label for="inputemail">Email</label>
+                    <input type="email" formControlName="email" class="form-control mt-1" id="email" name="email" placeholder="Email">
+                    <div class="text-danger">
+                        @if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched) {
+                            Email is required.
+                          }
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="inputsubject">Subject</label>
+                <input type="text" formControlName="subject" class="form-control mt-1" id="subject" name="subject" placeholder="Subject">
+                <div class="text-danger">
+                    @if (contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched) {
+                        Subject is required.
+                      }
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="inputmessage">Message</label>
+                <textarea class="form-control mt-1" formControlName="message" id="message" name="message" placeholder="Message" rows="8"></textarea>
+                <div class="text-danger">
+                    @if (contactForm.get('message')?.invalid && contactForm.get('message')?.touched) {
+                        Message is required.
+                      }
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-end mt-2">
+                    <button type="submit" (click)="submitContactForm()" class="btn btn-success btn-lg px-3">Let’s Talk</button>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

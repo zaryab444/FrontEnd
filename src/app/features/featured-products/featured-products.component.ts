@@ -1,11 +1,12 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { FeaturedProductsService } from './featured-products-service/featured-products.service';
+import { ModalComponent } from "../../core/components/modal/modal.component";
 
 @Component({
   selector: 'app-featured-products',
   standalone: true,
-  imports: [],
+  imports: [ModalComponent],
   templateUrl: './featured-products.component.html',
   styleUrl: './featured-products.component.scss'
 })
